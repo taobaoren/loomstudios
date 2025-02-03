@@ -29,7 +29,7 @@
 }
 
 .mobile-nav__link {
-    font-size: var(--size-base); /*font is small since designing mobile first*/
+    font-size: var(--size-xl); /*font is small since designing mobile first*/
     text-decoration: none;
     font-weight: 500;
     color: var(--color-slate600);
@@ -48,6 +48,6 @@
 }
 
 .mobile-nav__btn {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: var(--size-sm);
 }
