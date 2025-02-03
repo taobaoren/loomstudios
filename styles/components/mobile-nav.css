@@ -25,16 +25,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .mobile-nav__link {
-    font-size: var(--size-sm); /*font is small since designing mobile first*/
+    font-size: var(--size-base); /*font is small since designing mobile first*/
     text-decoration: none;
     font-weight: 500;
     color: var(--color-slate600);
     letter-spacing: -0.03em;
     transition: color 0.3s;
+    
 }
 
 .mobile-nav__link:hover {
@@ -47,5 +48,6 @@
 }
 
 .mobile-nav__btn {
+    margin-top: 1rem;
     font-size: var(--size-sm);
 }
