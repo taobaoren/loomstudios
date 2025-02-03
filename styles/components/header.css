@@ -1,0 +1,98 @@
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: var(--color-light);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+
+.header__menu {
+    display: none; /*regular nav menu should not show if below 768px. See media query below*/
+}
+
+.header__mobilenavbaricon {
+    color: var(--color-dark);
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+    display: block;
+    margin-left: 90vw;
+}
+
+
+
+
+
+
+
+/**** media queries below ****/
+
+
+/* x-small @media (min-width: 475px) {}*/
+
+/* small */
+/*@media (min-width: 640px) {}*/
+
+/* medium */
+@media (min-width: 769px) {
+    .header {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        width: 100%;
+        justify-content: flex-end;
+
+
+    }
+
+    .header__menu {
+        display: flex; /*makes nav horizontal*/
+        align-items: center;
+        list-style: none; /*removes bullets*/
+        padding: 0;
+        gap: 2em;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .header__link {
+        font-size: var(--size-sm); /*font is small since designing mobile first*/
+        text-decoration: none;
+        font-weight: 500;
+        color: var(--color-slate600);
+        letter-spacing: -0.03em;
+        transition: color 0.3s;
+    }
+    
+    .header__link:hover {
+        color: var(--color-indigo)
+    }
+    
+    .header__line {
+        border: .75px solid var(--color-slate600);
+        padding-top: 1.5em;
+    }
+    
+    
+    .header__resume {
+        font-size: var(--size-xs);
+    }
+
+    .header__mobilenavbaricon {
+        display: none;
+    }
+}
+
+
+/* large */
+@media (min-width: 1024px) {
+}
+
+/* x-large */
+/*@media (min-width: 1280px) {}*/
+
+/* xx-large */
+/*@media (min-width: 1536px) {}*/

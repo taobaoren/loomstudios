@@ -1,0 +1,51 @@
+/*NOTE: Javascript needed to open and close Mobile Menu Icon
+    - REQUIRED: make sure on .header class to add-  position: relative / z-index:9999 to show bar icon above mobile nav page.
+    - make sure .mobile-nav display: none is below (set this as default). will use js file to open and close
+    - in source folder, see utils folder > mobile-nav.js
+*/
+
+.mobile-nav { /*main nav container*/
+    position: fixed; /*can use absolute or fixed here but shows scrollbar. so if absolute must remove scrollbar with javascript*/
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%; /*for mobile % is better when an option over vh. can use VH here but mobile sometimes has issues*/
+    height: 100%;
+    background-color: var(--color-light);
+    display: none; /*must set this as none by default, will change to flex in json file*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mobile-nav__menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-nav__link {
+    font-size: var(--size-sm); /*font is small since designing mobile first*/
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-slate600);
+    letter-spacing: -0.03em;
+    transition: color 0.3s;
+}
+
+.mobile-nav__link:hover {
+    color: var(--color-indigo);
+}
+
+.mobile-nav__link-line {
+    border: 1px solid var(--color-slate400);
+    padding-right: 1.5em; /*need padding to see it*/
+}
+
+.mobile-nav__btn {
+    font-size: var(--size-sm);
+}

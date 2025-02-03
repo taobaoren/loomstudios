@@ -1,0 +1,114 @@
+.services {
+    margin-top: 8rem;
+    padding-top: 6rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
+}
+
+.services__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2%
+}
+
+.services__title {
+    width: 100%;
+    font-size: var(--size-3xl);
+    
+
+}
+
+.services__list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: relative;
+    width: 100%;
+    max-width: 65ch;
+}
+
+.services__list-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-slate400);
+}
+
+.services__list-item-number {
+    font-weight: 500;
+    color: var(--color-slate800)
+}
+
+.services__list-item-text {
+    width: 100%;
+    text-align: end;
+    color: var(--color-slate800);
+    font-size: var(--size-xl);
+}
+
+
+/*** media queries below ***/
+
+/* x-small @media (max-width: 475px)*/
+
+/* small */
+@media (min-width: 640px) {
+}
+
+/* medium */
+@media (min-width: 768px) {
+    .services {
+        margin-top: 8rem;
+        margin-bottom: 0rem;
+        padding-top: 4rem;
+        padding-bottom: 0rem;
+    }
+    
+    .services__content {
+        display: flex;
+        flex-direction: row;
+        gap: 2%
+    }
+    
+    .services__title {
+        width: 40%;
+        font-size: var(--size-4xl);
+    }
+    
+    .services__list {
+        margin-top: 0rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    
+        position: relative;
+        width: 58%;
+    }
+    
+    .services__list-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--color-slate400);
+    }
+    
+    
+    .services__list-item-text {
+        font-size: var(--size-lg);
+    }
+}
+
+/* large */
+/*@media (min-width: 1024px)*/
+
+/* x-large */
+/*@media (min-width: 1280px)*/
+
+/* xx-large */
+/*@media (min-width: 1536px)*/

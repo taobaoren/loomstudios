@@ -1,0 +1,131 @@
+.founders {
+    margin-top: 4rem;
+    padding-bottom: 0rem;
+}
+
+.founders__title {
+    font-size: var(--size-3xl);
+}
+
+.founders__profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    position: relative;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+}
+.founders__profile-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 60ch;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.profile-photo {
+    align-self: center;
+    border-radius: 100%;
+    width: 6rem;
+    height: 6rem;
+    background-color: rgb(37, 99, 235, 0.65);
+}
+
+.profile-name {
+    margin-top: 1rem;
+    font-size: var(--size-lg);
+
+}
+
+
+.profile-title {
+    color: var(--color-slate800)
+}
+
+.profile-description {
+    color: var(--color-slate600);
+    max-width: 60ch;
+    font-size: var(--size-lg);
+
+}
+
+
+
+
+
+
+
+/*** media queries below ***/
+
+/* x-small @media (min-width: 475px)*/
+
+/* small */
+@media (min-width: 640px) {
+}
+
+/* medium */
+@media (min-width: 768px) {
+    .founders {
+        margin-top: 4rem;
+        padding-bottom: 0rem;
+    }
+    
+    .founders__title {
+        font-size: var(--size-4xl);
+    }
+
+    .founders__profile {
+        display: flex;
+        flex-direction: row;
+        gap: 2%;
+        position: relative;
+        justify-content: space-evenly;
+        gap: 1rem;
+        padding-left: 8%;
+    
+    }
+    .founders__profile-panel {
+        display: flex;
+        flex-direction: column;
+        width: 38%;
+        max-width: 60ch;
+        margin-top: 1rem;
+        position: relative;
+    }
+    
+    .profile-photo {
+        align-self: flex-start;
+        border-radius: 100%;
+        width: 6rem;
+        height: 6rem;
+        background-color: rgb(37, 99, 235, 0.65);
+    }
+    
+    .profile-name {
+        margin-top: 1rem;
+        color: var(--color-slate800);
+
+    }
+    
+    
+    .profile-title {
+        color: var(--color-slate800)
+    }
+    
+    .profile-description {
+        color: var(--color-slate600);
+        font-size: var(--size-base);
+
+    }
+}
+
+/* large */
+/*@media (min-width: 1024px)*/
+
+/* x-large */
+/*@media (min-width: 1280px)*/
+
+/* xx-large */
+/*@media (min-width: 1536px)*/

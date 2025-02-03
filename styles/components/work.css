@@ -1,0 +1,160 @@
+.work {
+    margin-top: 8rem;
+    margin-bottom: 0rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    background-color: white;
+}
+
+.work__title {
+    font-size: var(--size-3xl);
+    
+
+}
+
+.work__scroll-container {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 1536;
+    height: 400px; /*match with tile size*/
+    position: relative;
+    overflow: clip;
+    padding: 0.65rem 0;
+    
+}
+
+.work__tile {
+    width: 300px;
+    height: 400px; /*match with container size*/
+    border-radius: 5%;
+    overflow: clip;
+
+    position: absolute;
+    left: max(calc(270px * 6), 100%); /*match with tile width AND count*/
+    animation: scroll-left; 
+    animation-duration: 75s; /*match in calc below*/
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.work__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.work__text {
+    align-self: center;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    padding: 20px;
+    z-index: 2;
+    user-select: none;
+    color: rgba(222, 222, 222, 0);
+}
+
+.work__tile::after { 
+    content:'';
+    background-color: rgba(222, 222, 222, 0);
+    width: 100%; 
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.work__tile:hover .work__text {
+    color: rgb(0, 0, 0);
+    transition: color 0.6s;
+}
+
+.work__tile:hover:after {
+    background-color: rgba(255, 255, 255, 0.796);
+    transition: background-color 0.4s;
+}
+
+.work__scroll-container:hover .work__tile {
+    animation-play-state: paused;
+}
+
+.work__tile:hover {
+    scale: 105%;
+    transition: 0.4s ease-out;
+}
+
+
+
+/*animation below*/
+
+.tile1 {
+    animation-delay: calc(75s / 6 * (6 - 1) * -1); 
+}
+
+.tile2 {
+    animation-delay: calc(75s / 6 * (6 - 2) * -1);
+}
+
+.tile3 {
+    animation-delay: calc(75s / 6 * (6 - 3) * -1);
+}
+
+.tile4 {
+    animation-delay: calc(75s / 6 * (6 - 4) * -1);
+}
+
+.tile5 {
+    animation-delay: calc(75s / 6 * (6 - 5) * -1);
+}
+
+.tile6 {
+    animation-delay: calc(75s / 6 * (6 - 6) * -1);
+}
+
+
+
+@keyframes scroll-left {
+    100% {
+        left: -300px; /*match this to width of single item, where we want item to end off frame*/
+    }
+}
+
+
+/*** media queries below ***/
+
+/* x-small @media (min-width: 475px)*/
+
+/* small */
+@media (min-width: 640px) {
+
+    
+}
+
+/* medium */
+@media (min-width: 768px) {
+    .work {
+        margin-top: 7rem;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        background-color: white;
+        
+    }
+
+    .work__title {
+        font-size: var(--size-4xl);
+    
+    }
+}
+
+/* large */
+/*@media (min-width: 1024px)*/
+
+/* x-large */
+/*@media (min-width: 1280px)*/
+
+/* xx-large */
+/*@media (min-width: 1536px)*/

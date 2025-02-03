@@ -1,0 +1,164 @@
+/*for quick reference*/
+
+/*** media queries below ***/
+ 
+/* @media (min-width: 475px) {}*/
+
+/* small - iPhone SE 375px */
+/*@media (min-width: 640px) {}*/
+
+/* medium */
+/*@media (min-width: 768px) {}*/
+
+/* large */
+/*@media (min-width: 1024px) {}*/
+
+/* x-large */
+/*@media (min-width: 1280px) {}*/
+
+/* xx-large */
+/*@media (min-width: 1536px) {}*/
+
+
+
+
+
+/*rose rgb(225, 29, 72)*/
+/*indigo rgb(37, 99, 235)*/
+
+
+/*** utility component classes below ***/
+
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    background-color: var(--color-indigo);
+    color: var(--color-light);
+    padding: 0.5em .75em;
+    border: 6px;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgb(37, 99, 235, 0.5), 0 6px 6px rgb(37, 99, 235, 0.5), 0 0 100px -10px var(--color-rose);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px); /*moves up on hover*/
+    box-shadow: 0 14px 28px rgb(37, 99, 235, 0.25), 0 10px 10px rgb(37, 99, 235, 0.22), 0 0 120px -10px var(--color-rose)
+
+}
+
+.container:not(.hero) {
+    width: 92%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+
+.section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+
+
+
+
+
+/**** use class hidden for load on scroll animation below ****/
+
+
+.scroll {
+    transition: all .8s; /*time to fade in*/
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(25%);
+    
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+
+}
+
+.scroll.delay150 {
+    transition-delay: 150ms;
+
+}
+
+.scroll.delay300 {
+    transition-delay: 300ms;
+}
+
+.scroll.delay450 {
+    transition-delay: 450ms;
+}
+
+
+@media(prefers-reduced-motion) {
+    .scroll {
+        transition: none;
+    }
+}
+
+/**** end of load on scroll animation below ****/
+
+
+
+
+
+/**** media queries below (mobile first architecture uses min-width)****/
+/* x-small */
+@media (min-width: 475px) {
+    .container:not(.hero) {
+        min-width: 475px;
+    }
+}
+
+/* small */
+@media (min-width: 640px) {
+    .container:not(.hero) {
+        min-width: 640px;
+    
+    }
+}
+
+/* medium */
+@media (min-width: 769px) {
+    .container:not(.hero) {
+        min-width: 769px;
+    }
+
+    
+}
+
+/* large */
+@media (min-width: 1024px) {
+    .container:not(.hero) {
+        min-width: 1024px;
+    }
+
+    .section {
+        margin-top: 10rem;
+        
+    }
+}
+
+/* x-large */
+@media (min-width: 1280px) {
+    .container:not(.hero) {
+        min-width: 1280px;
+    }
+}
+
+/* xx-large */
+@media (min-width: 1536px) {
+    .container:not(.hero) {
+        min-width: 1280px;
+    }
+}
