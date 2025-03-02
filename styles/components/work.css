@@ -68,21 +68,21 @@
     z-index: 1;
 }
 
-.work__tile:hover .work__text {
+.work__tile:hover .work__text, .work__tile:active .work__text{
     color: rgb(0, 0, 0);
     transition: color 0.6s;
 }
 
-.work__tile:hover:after {
+.work__tile:hover:after, .work__tile:active:after {
     background-color: rgba(255, 255, 255, 0.796);
     transition: background-color 0.4s;
 }
 
-.work__scroll-container:hover .work__tile {
+.work__scroll-container:hover .work__tile, .work__scroll-container:active .work__tile {
     animation-play-state: paused;
 }
 
-.work__tile:hover {
+.work__tile:hover, .work__tile:active {
     scale: 105%;
     transition: 0.4s ease-out;
 }
