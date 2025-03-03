@@ -15,5 +15,5 @@ const animateScroll = () => {
     const hiddenElements = document.querySelectorAll('.scroll');
     hiddenElements.forEach((el) => observer.observe(el));
 }
-console.log('animate bish')
+console.log('animate connected')
 export default animateScroll;
