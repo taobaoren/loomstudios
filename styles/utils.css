@@ -100,11 +100,11 @@
 }
 
 
-@media(prefers-reduced-motion) {
+/* @media(prefers-reduced-motion) {
     .scroll {
         transition: none;
     }
-}
+}*/
 
 /**** end of load on scroll animation below ****/
 
