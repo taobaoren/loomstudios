@@ -8,7 +8,6 @@
 
 .work__title {
     font-size: var(--size-3xl);
-    
 
 }
 
@@ -17,26 +16,29 @@
     margin-bottom: 1rem;
     width: 100%;
     max-width: 1536;
-    height: 400px; /*match with tile size*/
+    height: 430px; /*match with tile size FOR ANIMATION*/
     position: relative;
-    overflow: clip;
+    overflow: scroll;
+    display: flex;
     padding: 0.65rem 0;
+    gap: 1rem;
+    overflow-y: hidden;
+    scrollbar-color: lightgray transparent;
+    scrollbar-width: thin;
     
 }
 
 .work__tile {
     width: 300px;
-    height: 400px; /*match with container size*/
+    height: 400px; /*match with container size FOR ANIMATION*/
     border-radius: 5%;
     overflow: clip;
+    flex-shrink: 0;
+    position: relative;
+    left: 1rem;
 
-    position: absolute;
-    left: max(calc(270px * 6), 100%); /*match with tile width AND count*/
-    animation: scroll-left; 
-    animation-duration: 45s; /*match in calc below*/
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
+
 
 .work__tile-name {
     position: absolute;
@@ -46,7 +48,7 @@
     z-index: 2;
     width: 300px;
     height: 400px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
@@ -110,39 +112,7 @@
 
 
 
-/*animation below*/
 
-.tile1 {
-    animation-delay: calc(45s / 6 * (6 - 1) * -1); 
-}
-
-.tile2 {
-    animation-delay: calc(45s / 6 * (6 - 2) * -1);
-}
-
-.tile3 {
-    animation-delay: calc(45s / 6 * (6 - 3) * -1);
-}
-
-.tile4 {
-    animation-delay: calc(45s / 6 * (6 - 4) * -1);
-}
-
-.tile5 {
-    animation-delay: calc(45s / 6 * (6 - 5) * -1);
-}
-
-.tile6 {
-    animation-delay: calc(45s / 6 * (6 - 6) * -1);
-}
-
-
-
-@keyframes scroll-left {
-    100% {
-        left: -300px; /*match this to width of single item, where we want item to end off frame*/
-    }
-}
 
 
 /*** media queries below ***/
@@ -168,6 +138,66 @@
     .work__title {
         font-size: var(--size-4xl);
     
+    }
+
+    .work__scroll-container {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        max-width: 1536;
+        height: 400px; /*match with tile size*/
+        position: relative;
+        overflow: clip;
+        padding: 0.65rem 0;
+        
+    }
+    
+    .work__tile {
+        width: 300px;
+        height: 400px; /*match with container size*/
+        border-radius: 5%;
+        overflow: clip;
+    
+        position: absolute;
+        left: max(calc(270px * 6), 100%); /*match with tile width AND count*/
+        animation: scroll-left; 
+        animation-duration: 45s; /*match in calc below*/
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    /*animation below*/
+
+    .tile1 {
+        animation-delay: calc(45s / 6 * (6 - 1) * -1); 
+    }
+
+    .tile2 {
+        animation-delay: calc(45s / 6 * (6 - 2) * -1);
+    }
+
+    .tile3 {
+        animation-delay: calc(45s / 6 * (6 - 3) * -1);
+    }
+
+    .tile4 {
+        animation-delay: calc(45s / 6 * (6 - 4) * -1);
+    }
+
+    .tile5 {
+        animation-delay: calc(45s / 6 * (6 - 5) * -1);
+    }
+
+    .tile6 {
+        animation-delay: calc(45s / 6 * (6 - 6) * -1);
+    }
+
+
+
+    @keyframes scroll-left {
+        100% {
+            left: -300px; /*match this to width of single item, where we want item to end off frame*/
+        }
     }
 }
 
