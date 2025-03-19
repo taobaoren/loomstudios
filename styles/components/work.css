@@ -33,9 +33,24 @@
     position: absolute;
     left: max(calc(270px * 6), 100%); /*match with tile width AND count*/
     animation: scroll-left; 
-    animation-duration: 75s; /*match in calc below*/
+    animation-duration: 45s; /*match in calc below*/
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+.work__tile-name {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    width: 300px;
+    height: 400px;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    
 }
 
 .work__image {
@@ -68,21 +83,27 @@
     z-index: 1;
 }
 
-.work__tile:hover .work__text, .work__tile:active .work__text{
+
+.work__tile:hover .work__text {
     color: rgb(0, 0, 0);
     transition: color 0.6s;
 }
 
-.work__tile:hover:after, .work__tile:active:after {
+.work__tile:hover .work__tile-name {
+    display: none;
+    transition: color 0.4s;
+}
+
+.work__tile:hover:after {
     background-color: rgba(255, 255, 255, 0.796);
     transition: background-color 0.4s;
 }
 
-.work__scroll-container:hover .work__tile, .work__scroll-container:active .work__tile {
+.work__scroll-container:hover .work__tile {
     animation-play-state: paused;
 }
 
-.work__tile:hover, .work__tile:active {
+.work__tile:hover {
     scale: 105%;
     transition: 0.4s ease-out;
 }
@@ -92,27 +113,27 @@
 /*animation below*/
 
 .tile1 {
-    animation-delay: calc(75s / 6 * (6 - 1) * -1); 
+    animation-delay: calc(45s / 6 * (6 - 1) * -1); 
 }
 
 .tile2 {
-    animation-delay: calc(75s / 6 * (6 - 2) * -1);
+    animation-delay: calc(45s / 6 * (6 - 2) * -1);
 }
 
 .tile3 {
-    animation-delay: calc(75s / 6 * (6 - 3) * -1);
+    animation-delay: calc(45s / 6 * (6 - 3) * -1);
 }
 
 .tile4 {
-    animation-delay: calc(75s / 6 * (6 - 4) * -1);
+    animation-delay: calc(45s / 6 * (6 - 4) * -1);
 }
 
 .tile5 {
-    animation-delay: calc(75s / 6 * (6 - 5) * -1);
+    animation-delay: calc(45s / 6 * (6 - 5) * -1);
 }
 
 .tile6 {
-    animation-delay: calc(75s / 6 * (6 - 6) * -1);
+    animation-delay: calc(45s / 6 * (6 - 6) * -1);
 }
 
 
